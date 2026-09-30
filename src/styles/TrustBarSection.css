@@ -1,0 +1,97 @@
+/* ============================================================
+   TRUST BAR SECTION
+   ============================================================ */
+
+.trustbar-section {
+  position: relative;
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #0A192F;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.trustbar-inner {
+  
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+.trustbar-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8899AA;
+}
+
+/* ============================================================
+   LOGO LOOP WRAPPER
+   ============================================================ */
+.trustbar-logoloop-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fade edges */
+.trustbar-logoloop-wrap::before,
+.trustbar-logoloop-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.trustbar-logoloop-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, #0A192F 0%, transparent 100%);
+}
+
+.trustbar-logoloop-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, #0A192F 0%, transparent 100%);
+}
+
+/* ============================================================
+   LOGO TEXT PLACEHOLDER
+   ============================================================ */
+.trustbar-logo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #566A80;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.trustbar-logo-text:hover {
+  color: #C5A47E;
+}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.trustbar-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 1rem;
+}
+
+
+

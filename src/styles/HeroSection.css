@@ -1,0 +1,400 @@
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 6rem;
+  background-color: #0A192F;
+  min-height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ============================================================
+   GALAXY BACKGROUND
+   ============================================================ */
+.hero-galaxy {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.hero-galaxy::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 25, 47, 0.4) 0%,
+    rgba(10, 25, 47, 0.85) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================================
+   CONTENT WRAPPER — Mouse passes through
+   ============================================================ */
+.hero-inner {
+  position: relative;
+  z-index: 5;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90rem;
+  padding: 0 1.25rem 3rem;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Only interactive elements get mouse events */
+.hero-inner a,
+.hero-inner button,
+.hero-inner .hero-showmore {
+  pointer-events: auto;
+}
+
+/* ============================================================
+   HEADLINE — Decorative, no mouse
+   ============================================================ */
+.hero-heading-block {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 30;
+  filter: drop-shadow(0 0 40px rgba(197, 164, 126, 0.25));
+  pointer-events: none;
+}
+
+.hero-heading {
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-size: 2.25rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  pointer-events: none;
+}
+
+/* ============================================================
+   PORTRAIT — Decorative, no mouse
+   ============================================================ */
+.hero-portrait-wrap {
+  position: relative;
+  z-index: 10;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero-portrait {
+  width: auto;
+  height: 340px;
+  object-fit: contain;
+  object-position: bottom;
+  opacity: 0.95;
+  filter: brightness(0.95) contrast(1.05);
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* ============================================================
+   LEFT CONTENT — Text no mouse, button yes mouse
+   ============================================================ */
+.hero-left {
+  position: static;
+  z-index: 40;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 22rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero-left p {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  pointer-events: none;
+}
+
+.hero-left .btn-primary {
+  pointer-events: auto;
+}
+
+/* ============================================================
+   RIGHT CONTENT — Stats no mouse, show more yes mouse
+   ============================================================ */
+.hero-right {
+  position: static;
+  z-index: 40;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 20rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-style: italic;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero-showmore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hero-showmore-label {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  transition: color 0.2s ease;
+}
+
+.hero-showmore:hover .hero-showmore-label {
+  color: #ffffff;
+}
+
+.hero-showmore-icon {
+  color: #ffffff;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE FIRST
+   ============================================================ */
+
+@media (min-width: 480px) {
+  .hero-heading {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-inner {
+    padding: 0 2rem 3.5rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+  }
+
+  .hero-portrait {
+    height: 420px;
+  }
+
+  .hero-left,
+  .hero-right {
+    margin-top: 2.5rem;
+  }
+
+  .hero-left p,
+  .hero-stats,
+  .hero-showmore-label {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-inner {
+    padding: 0 3rem 4rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+  }
+
+  .hero-portrait {
+    height: 480px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding-top: 0;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    height: 800px;
+    padding: 0 2.5rem;
+  }
+
+  .hero-heading-block {
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    right: 0;
+    padding: 0 4rem;
+    overflow: visible;
+  }
+
+  .hero-heading {
+    font-size: clamp(4rem, 7vw, 8.5rem);
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .hero-portrait-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .hero-portrait {
+    height: 520px;
+  }
+
+  .hero-left {
+    position: absolute;
+    bottom: 3rem;
+    left: 2.5rem;
+    margin-top: 0;
+    max-width: 22rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 2.5rem;
+    margin-top: 0;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .hero-stats {
+    text-align: right;
+  }
+
+  .hero-showmore {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-inner {
+    height: 850px;
+    padding: 0 4rem;
+  }
+
+  .hero-heading-block {
+    top: 6rem;
+    padding: 0 5rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(5rem, 7.5vw, 9rem);
+  }
+
+  .hero-portrait {
+    height: 560px;
+  }
+
+  .hero-left {
+    left: 4rem;
+    bottom: 3.5rem;
+    max-width: 24rem;
+  }
+
+  .hero-right {
+    right: 4rem;
+    bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-inner {
+    height: 900px;
+    padding: 0 5rem;
+  }
+
+  .hero-heading-block {
+    top: 7rem;
+    padding: 0 6rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(6rem, 7.5vw, 10rem);
+  }
+
+  .hero-portrait {
+    height: 620px;
+  }
+
+  .hero-left {
+    left: 5rem;
+    bottom: 4rem;
+    max-width: 26rem;
+  }
+
+  .hero-right {
+    right: 5rem;
+    bottom: 4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-inner {
+    height: 950px;
+    padding: 0 6rem;
+  }
+
+  .hero-heading-block {
+    top: 8rem;
+    padding: 0 8rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(7rem, 7vw, 11rem);
+  }
+
+  .hero-portrait {
+    height: 700px;
+  }
+
+  .hero-left {
+    left: 6rem;
+    bottom: 4.5rem;
+    max-width: 28rem;
+  }
+
+  .hero-right {
+    right: 6rem;
+    bottom: 4.5rem;
+  }
+}

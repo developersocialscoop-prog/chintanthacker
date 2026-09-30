@@ -1,0 +1,233 @@
+/* ============================================================
+   SHIFT SECTION
+   ============================================================ */
+
+.shift-section {
+  position: relative;
+  padding: 6rem 0;
+  background-color: #0A192F;
+  overflow: hidden;
+}
+
+.shift-inner {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.shift-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.shift-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C5A47E;
+}
+
+.shift-label::before,
+.shift-label::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: #C5A47E;
+}
+
+.shift-heading {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.shift-subheading {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #8899AA;
+  max-width: 32rem;
+}
+
+/* ============================================================
+   GRID
+   ============================================================ */
+.shift-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* ============================================================
+   COLUMNS
+   ============================================================ */
+.shift-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shift-col-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8899AA;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.shift-col-without .shift-col-title {
+  color: #A85555;
+}
+
+.shift-col-with .shift-col-title {
+  color: #C5A47E;
+}
+
+/* ============================================================
+   LIST
+   ============================================================ */
+.shift-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.shift-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.shift-item:last-child {
+  border-bottom: none;
+}
+
+.shift-item:hover {
+  padding-left: 0.25rem;
+}
+
+.shift-item-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.shift-item-icon--bad {
+  color: #A85555;
+}
+
+.shift-item-icon--good {
+  color: #C5A47E;
+}
+
+.shift-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.shift-item-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8899AA;
+}
+
+.shift-item-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.shift-col-without .shift-item-text {
+  color: #B8A5A5;
+}
+
+.shift-col-with .shift-item-text {
+  color: #E8D4A2;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (768px+)
+   ============================================================ */
+@media (min-width: 768px) {
+  .shift-section {
+    padding: 8rem 0;
+  }
+
+  .shift-inner {
+    padding: 0 3rem;
+    gap: 5rem;
+  }
+
+  .shift-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — DESKTOP (1024px+)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .shift-inner {
+    padding: 0 4rem;
+  }
+
+  .shift-heading {
+    font-size: 3rem;
+  }
+
+  .shift-grid {
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+
+  .shift-col-slider {
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — XL (1280px+)
+   ============================================================ */
+@media (min-width: 1280px) {
+  .shift-inner {
+    padding: 0 5rem;
+  }
+
+  .shift-heading {
+    font-size: 3.25rem;
+  }
+
+  .shift-grid {
+    gap: 3rem;
+  }
+}

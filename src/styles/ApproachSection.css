@@ -1,0 +1,395 @@
+/* ============================================================
+   APPROACH SECTION
+   ============================================================ */
+
+.approach-section {
+  position: relative;
+  padding: 5rem 0;
+  background-color: #0A192F;
+  overflow: hidden;
+}
+
+.approach-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(197, 164, 126, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.approach-inner {
+  position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.approach-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.approach-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C5A47E;
+}
+
+.approach-label::before,
+.approach-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #C5A47E;
+}
+
+.approach-heading {
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.approach-subheading {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #8899AA;
+  max-width: 32rem;
+}
+
+/* ============================================================
+   GRID
+   ============================================================ */
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  position: relative;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.approach-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(197, 164, 126, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Step Number */
+.approach-card-number {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #C5A47E;
+  opacity: 0.5;
+  letter-spacing: 0.02em;
+}
+
+/* Icon */
+.approach-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(197, 164, 126, 0.1);
+  color: #C5A47E;
+  transition: all 0.3s ease;
+}
+
+.approach-card:hover .approach-card-icon {
+  background: rgba(197, 164, 126, 0.2);
+  color: #E8D4A2;
+}
+
+/* Title */
+.approach-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Divider */
+.approach-card-divider {
+  width: 32px;
+  height: 2px;
+  background: #C5A47E;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.approach-card:hover .approach-card-divider {
+  width: 48px;
+}
+
+/* Body Text */
+.approach-card-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #C5CBD5;
+  margin: 0;
+}
+
+/* Detail Text */
+.approach-card-detail {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #566A80;
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  transition: color 0.3s ease;
+}
+
+.approach-card:hover .approach-card-detail {
+  color: #8899AA;
+}
+
+/* ============================================================
+   RESPONSIVE — XS (480px+)
+   ============================================================ */
+@media screen and (min-width: 480px) {
+  .approach-inner {
+    padding: 0 1.25rem;
+  }
+
+  .approach-heading {
+    font-size: 2rem;
+  }
+
+  .approach-subheading {
+    font-size: 0.9375rem;
+  }
+
+  .approach-card {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SM (640px+) — 2 columns
+   ============================================================ */
+@media screen and (min-width: 640px) {
+  .approach-section {
+    padding: 6rem 0;
+  }
+
+  .approach-inner {
+    padding: 0 1.5rem;
+    gap: 4rem;
+  }
+
+  .approach-heading {
+    font-size: 2.25rem;
+  }
+
+  .approach-subheading {
+    font-size: 1rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .approach-card-number {
+    font-size: 1.75rem;
+  }
+
+  .approach-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .approach-card-title {
+    font-size: 1.125rem;
+  }
+
+  .approach-card-text {
+    font-size: 0.9375rem;
+  }
+
+  .approach-card-detail {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MD (768px+)
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .approach-inner {
+    padding: 0 2rem;
+  }
+
+  .approach-heading {
+    font-size: 2.5rem;
+  }
+
+  .approach-grid {
+    gap: 1.75rem;
+  }
+
+  .approach-card {
+    padding: 2rem 1.75rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — LG (1024px+) — 4 columns
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .approach-section {
+    padding: 7rem 0;
+  }
+
+  .approach-inner {
+    padding: 0 2.5rem;
+    gap: 5rem;
+  }
+
+  .approach-heading {
+    font-size: 3rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Connecting line behind cards */
+  .approach-grid::before {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(197, 164, 126, 0.15) 15%,
+      rgba(197, 164, 126, 0.15) 85%,
+      transparent 100%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .approach-card {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1.5rem;
+  }
+
+  .approach-card-number {
+    font-size: 2rem;
+  }
+
+  .approach-card-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .approach-card-title {
+    font-size: 1.125rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — XL (1280px+)
+   ============================================================ */
+@media screen and (min-width: 1280px) {
+  .approach-inner {
+    padding: 0 3.5rem;
+    gap: 5.5rem;
+  }
+
+  .approach-heading {
+    font-size: 3.25rem;
+  }
+
+  .approach-grid {
+    gap: 2rem;
+  }
+
+  .approach-card {
+    padding: 2.25rem 1.75rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 2XL (1536px+)
+   ============================================================ */
+@media screen and (min-width: 1536px) {
+  .approach-inner {
+    padding: 0 4rem;
+    gap: 6rem;
+  }
+
+  .approach-heading {
+    font-size: 3.5rem;
+  }
+
+  .approach-grid {
+    gap: 2.5rem;
+  }
+
+  .approach-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .approach-card,
+  .approach-card-icon,
+  .approach-card-divider {
+    transition: none;
+  }
+}
