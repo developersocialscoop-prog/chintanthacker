@@ -1,16 +1,14 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import {
   FiTrendingUp,
-  FiInstagram,
-  FiUsers,
   FiSearch,
-  FiCamera,
-  FiPenTool,
   FiTarget,
-  FiCode,
+  FiUsers,
+  FiDollarSign,
+  FiCompass,
+  FiSend,
   FiZap,
-  FiLayers,
-  FiHeart,
+  FiAward,
 } from 'react-icons/fi';
 import '../../styles/ServicesSection.css';
 
@@ -44,74 +42,62 @@ const cardVariant = {
 };
 
 /* ============================================================
-   CONTENT — 11 Services (compact)
+   CONTENT — 9 Business Growth Services
    ============================================================ */
 const services = [
   {
-    id: 'performance',
+    id: 'growth-strategy',
     icon: FiTrendingUp,
-    title: 'Performance Marketing',
-    description: 'Paid ads that convert.',
+    title: 'Business Growth Strategy',
+    description: 'A clear roadmap for sustainable growth.',
   },
   {
-    id: 'social',
-    icon: FiInstagram,
-    title: 'Social Media',
-    description: 'Organic growth and engagement.',
-  },
-  {
-    id: 'influencer',
-    icon: FiUsers,
-    title: 'Influencer Marketing',
-    description: 'Creator partnerships that work.',
-  },
-  {
-    id: 'seo',
+    id: 'market-analysis',
     icon: FiSearch,
-    title: 'SEO',
-    description: 'Rank higher. Get found.',
+    title: 'Market & Opportunity Analysis',
+    description: 'Find your best opportunities.',
   },
   {
-    id: 'photography',
-    icon: FiCamera,
-    title: 'Photography & Video',
-    description: 'Shoots, films, event coverage.',
-  },
-  {
-    id: 'content',
-    icon: FiPenTool,
-    title: 'Content Creation',
-    description: 'Reels, blogs, storytelling.',
-  },
-  {
-    id: 'branding',
+    id: 'growth-planning',
     icon: FiTarget,
-    title: 'Branding & Strategy',
-    description: 'Positioning and identity.',
+    title: 'Growth Planning',
+    description: 'Turn goals into weekly actions.',
   },
   {
-    id: 'web',
-    icon: FiCode,
-    title: 'Web Development',
-    description: 'Sites, e-commerce, apps.',
+    id: 'customer-acquisition',
+    icon: FiUsers,
+    title: 'Customer Acquisition',
+    description: 'Find and convert the right audience.',
   },
   {
-    id: 'ai-automation',
+    id: 'revenue-opportunities',
+    icon: FiDollarSign,
+    title: 'Revenue Opportunities',
+    description: 'Unlock new income streams.',
+  },
+  {
+    id: 'business-positioning',
+    icon: FiCompass,
+    title: 'Business Positioning',
+    description: 'Stand out in a crowded market.',
+  },
+  {
+    id: 'go-to-market',
+    icon: FiSend,
+    title: 'Go-to-Market Strategy',
+    description: 'Launch with momentum.',
+  },
+  {
+    id: 'growth-optimisation',
     icon: FiZap,
-    title: 'AI & Automation',
-    description: 'Workflows, bots, GPT tools.',
+    title: 'Growth Optimisation',
+    description: "Fix what's slowing you down.",
   },
   {
-    id: 'ai-vr',
-    icon: FiLayers,
-    title: 'AI & VR Development',
-    description: 'Next-gen experiences.',
-  },
-  {
-    id: 'success',
-    icon: FiHeart,
-    title: 'Client Success',
-    description: 'Support, retention, growth.',
+    id: 'brand-strategy',
+    icon: FiAward,
+    title: 'Brand Strategy & Positioning',
+    description: 'Build a brand people trust.',
   },
 ];
 
@@ -125,7 +111,7 @@ export default function ServicesSection() {
     <section id="services" className="services-section">
       <div className="services-inner">
 
-        {/* ============ HEADER — Left + Right split ============ */}
+        {/* ============ HEADER ============ */}
         <motion.div
           className="services-header"
           variants={shouldReduceMotion ? undefined : container}
@@ -139,12 +125,12 @@ export default function ServicesSection() {
             </motion.span>
 
             <motion.h2 variants={fadeUp} className="services-heading">
-              Everything I do to grow your brand
+              Everything I do to grow your business
             </motion.h2>
           </div>
 
           <motion.p variants={fadeUp} className="services-subheading">
-            Eleven services. One partner. Zero chaos.
+            Nine strategic services. One growth partner. Zero chaos.
           </motion.p>
         </motion.div>
 

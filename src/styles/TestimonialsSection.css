@@ -1,0 +1,261 @@
+/* ============================================================
+   TESTIMONIALS SECTION
+   ============================================================ */
+
+.testimonials-section {
+  position: relative;
+  padding: 4rem 0;
+  background-color: #0A192F;
+  overflow: hidden;
+}
+
+/* Gold accent line at top */
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(197, 164, 126, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.testimonials-inner {
+  position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.testimonials-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.testimonials-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #C5A47E;
+}
+
+.testimonials-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #C5A47E;
+}
+
+.testimonials-heading {
+  font-family: 'Bodoni Moda', 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.testimonials-subheading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #8899AA;
+  max-width: 34rem;
+}
+
+/* ============================================================
+   MARQUEE WRAPPER
+   ============================================================ */
+.testimonials-marquee-wrap {
+  position: relative;
+  width: 100%;
+  padding: 0.75rem 0;
+  /* Soft fade edges left + right */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   RESPONSIVE — XS (480px+)
+   ============================================================ */
+@media screen and (min-width: 480px) {
+  .testimonials-inner {
+    padding: 0 1.25rem;
+    gap: 2rem;
+  }
+
+  .testimonials-heading {
+    font-size: 1.75rem;
+  }
+
+  .testimonials-subheading {
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SM (640px+)
+   ============================================================ */
+@media screen and (min-width: 640px) {
+  .testimonials-section {
+    padding: 5rem 0;
+  }
+
+  .testimonials-inner {
+    padding: 0 1.5rem;
+    gap: 2.25rem;
+  }
+
+  .testimonials-heading {
+    font-size: 2rem;
+  }
+
+  .testimonials-subheading {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MD (768px+) — Split header
+   ============================================================ */
+@media screen and (min-width: 768px) {
+  .testimonials-inner {
+    padding: 0 2rem;
+    gap: 2.75rem;
+  }
+
+  .testimonials-header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .testimonials-header-left {
+    flex: 1;
+    max-width: 60%;
+  }
+
+  .testimonials-heading {
+    font-size: 2.25rem;
+  }
+
+  .testimonials-subheading {
+    flex: 1;
+    max-width: 35%;
+    text-align: right;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — LG (1024px+)
+   ============================================================ */
+@media screen and (min-width: 1024px) {
+  .testimonials-section {
+    padding: 6rem 0;
+  }
+
+  .testimonials-inner {
+    padding: 0 2.5rem;
+    gap: 3rem;
+  }
+
+  .testimonials-heading {
+    font-size: 2.75rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — XL (1280px+)
+   ============================================================ */
+@media screen and (min-width: 1280px) {
+  .testimonials-inner {
+    padding: 0 3.5rem;
+    gap: 3.5rem;
+  }
+
+  .testimonials-heading {
+    font-size: 3rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 2XL (1536px+)
+   ============================================================ */
+@media screen and (min-width: 1536px) {
+  .testimonials-inner {
+    padding: 0 4rem;
+    gap: 4rem;
+  }
+
+  .testimonials-heading {
+    font-size: 3.25rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — 3XL (1920px+)
+   ============================================================ */
+@media screen and (min-width: 1920px) {
+  .testimonials-inner {
+    padding: 0 5rem;
+    gap: 4.5rem;
+  }
+
+  .testimonials-heading {
+    font-size: 3.5rem;
+  }
+
+  .testimonials-subheading {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-marquee-wrap {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}

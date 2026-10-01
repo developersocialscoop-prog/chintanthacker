@@ -3,7 +3,7 @@ import { FiXCircle, FiCheckCircle } from 'react-icons/fi';
 import BeforeAfterSlider from '../ui/BeforeAfterSlider';
 import thenImg from '../../assets/then.png';
 import nowImg from '../../assets/now.png';
-import '../../styles/ShiftSection.css';
+import '../../styles/JourneySection.css';
 
 
 /* ============================================================
@@ -31,54 +31,54 @@ const fadeUp = {
    ============================================================ */
 const beforePoints = [
   {
-    label: 'One Skill Only',
-    text: 'Knew only basic code. No video, no design, no strategy.',
+    label: 'CURIOUS BUILDER',
+    text: 'Started with a fascination for brands, people and how businesses grow.',
   },
   {
-    label: 'Random Gigs',
-    text: 'Chasing freelance work with no direction or system.',
+    label: 'FROM CREATIVITY TO STRATEGY',
+    text: 'Moved from design and marketing execution into brand and business strategy.',
   },
   {
-    label: 'No Brand',
-    text: 'Just another face in a crowded market. Forgetful.',
+    label: 'LEARNED BY DOING',
+    text: 'Built businesses, worked with entrepreneurs and solved real-world growth challenges.',
   },
   {
-    label: 'Price Wars',
-    text: 'Competing on cost. Undervalued and overworked.',
+    label: 'EVERY BUSINESS WAS A LESSON',
+    text: 'Different industries. Different problems. One constant — finding what drives growth.',
   },
   {
-    label: 'No Scale',
-    text: 'Every month started from zero. No repeat clients.',
+    label: 'BEYOND MARKETING',
+    text: 'Realised that sustainable growth isn’t just about marketing. It’s about the business as a whole.',
   },
 ];
 
 const afterPoints = [
   {
-    label: 'Full-Stack Creator',
-    text: 'Video. Design. Websites. Automation. All under one roof.',
+    label: 'BUSINESS GROWTH CONSULTANT',
+    text: 'Helping businesses find clarity, opportunity and their next stage of growth.',
   },
   {
-    label: 'Clear Systems',
-    text: 'A proven process — from discovery to launch.',
+    label: 'STRATEGY THAT MOVES',
+    text: 'Connecting business strategy, brand, marketing and digital execution.',
   },
   {
-    label: 'Recognized Brand',
-    text: 'Founder of SocialScoop. Trusted by 50+ businesses.',
+    label: 'FOUNDER OF SOCIAL SCOOP',
+    text: 'Building a brand growth agency focused on helping businesses become more visible, relevant and commercially stronger.',
   },
   {
-    label: 'Premium Value',
-    text: 'Charging for impact, not for hours. Clients say yes faster.',
+    label: '15+ YEARS. MULTIPLE DISCIPLINES.',
+    text: 'Marketing. Branding. Digital. Events. Design. Consulting. Entrepreneurship.',
   },
   {
-    label: 'Built to Last',
-    text: 'Repeat clients, referrals, and a growing legacy.',
+    label: 'BUILT FOR THE NEXT CHAPTER',
+    text: 'Working with ambitious businesses that aren’t looking to simply stay relevant — they’re looking to grow.',
   },
 ];
 
 /* ============================================================
    COMPONENT
    ============================================================ */
-export default function ShiftSection() {
+export default function JourneySection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -98,7 +98,7 @@ export default function ShiftSection() {
           </motion.span>
 
           <motion.h2 variants={fadeUp} className="shift-heading">
-            From a Solo Freelancer to a Full-Service Digital Partner
+            From a Marketing Agency Partner to Business Growth Consultant
           </motion.h2>
 
           <motion.p variants={fadeUp} className="shift-subheading">

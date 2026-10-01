@@ -9,18 +9,14 @@ export default function AboutSection() {
   const shouldReduceMotion = useReducedMotion();
 
   const galleryItems = [
-    { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
-    { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
-    { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
-    { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
-    { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: 'Deep Diving' },
-    { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: 'Train Track' },
-    { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: 'Santorini' },
-    { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: 'Blurry Lights' },
-    { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: 'New York' },
-    { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: 'Good Boy' },
-    { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
-    { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
+    { image: `src/assets/gallary/img-1.png`, text: '' },
+    { image: `src/assets/gallary/img-2.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-3.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-5.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-6.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-7.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-8.jpeg`, text: '' },
+    { image: `src/assets/gallary/img-9.jpeg`, text: '' },
   ];
 
   return (
@@ -47,29 +43,58 @@ export default function AboutSection() {
           transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <span className="about-label">About Me</span>
+          <span className="about-label">About Chintan</span>
 
           <h2 className="about-heading">
-            I'm Chintan Thacker —<br />
-            Digital Creator & Founder of SocialScoop
+            Growth isn't just about marketing.<br />
+            It's about getting the <em>entire business</em> moving in the right direction.
           </h2>
 
           <div className="about-body">
             <p>
-              I started as a solo freelancer in 2014, writing code from a small
-              room in Ahmedabad. Ten years later, I've built a multi-disciplinary
-              practice — <strong>video, design, websites, and automation</strong> —
-              serving 50+ businesses across India.
+              I'm <strong>Dr. Chintan Thacker</strong> — a Business Growth Consultant,
+              entrepreneur, and marketing strategist with <strong>15+ years of
+              experience</strong> across brand building, marketing, digital growth,
+              events, design, and business consulting.
             </p>
 
             <p>
-              My mission is simple: create digital experiences that actually work —
-              on time, on budget, without the usual agency drama.
+              Over the years, I've worked with businesses at every stage — from
+              emerging ventures looking for their first growth engine to established
+              brands looking to strengthen their positioning, acquire customers,
+              and scale.
             </p>
+          </div>
 
+          {/* APPROACH FLOW */}
+          <div className="about-approach">
+            <span className="about-approach-label">My Approach</span>
+
+            <div className="about-approach-flow">
+              <span className="about-approach-step">Understand</span>
+              <span className="about-approach-arrow" aria-hidden="true">→</span>
+              <span className="about-approach-step">Identify</span>
+              <span className="about-approach-arrow" aria-hidden="true">→</span>
+              <span className="about-approach-step">Build</span>
+              <span className="about-approach-arrow" aria-hidden="true">→</span>
+              <span className="about-approach-step">Execute</span>
+              <span className="about-approach-arrow" aria-hidden="true">→</span>
+              <span className="about-approach-step">Measure</span>
+              <span className="about-approach-arrow" aria-hidden="true">→</span>
+              <span className="about-approach-step">Optimise</span>
+            </div>
+          </div>
+
+          {/* PHILOSOPHY */}
+          <blockquote className="about-quote">
+            I don't believe in marketing for the sake of marketing.
+          </blockquote>
+
+          <div className="about-body">
             <p>
-              When I'm not building, you'll find me sharing creator lessons on
-              Instagram, mentoring young talent, or spending time with my family.
+              I believe every activity should have a purpose — whether that's
+              building a stronger brand, generating demand, increasing conversions,
+              entering a new market, or creating a scalable growth system.
             </p>
           </div>
 

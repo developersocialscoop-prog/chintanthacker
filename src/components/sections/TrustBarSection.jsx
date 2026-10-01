@@ -3,12 +3,18 @@ import '../../styles/TrustBarSection.css';
 
 
 const clientLogos = [
-  { node: <span className="trustbar-logo-text">UCL</span>, href: '#' },
-  { node: <span className="trustbar-logo-text">OXFORD</span>, href: '#' },
-  { node: <span className="trustbar-logo-text">TEDx</span>, href: '#' },
-  { node: <span className="trustbar-logo-text">Unilever</span>, href: '#' },
-  { node: <span className="trustbar-logo-text">accenture</span>, href: '#' },
-  { node: <span className="trustbar-logo-text">L&apos;OREAL</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Brahmand</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Pallavi</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Samagra Suvidha</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">MGOH</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Seven Crist</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Vantaris</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Chinshne</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Swankyish</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Daggle</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Monarchstays</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Polyesia</span>, href: '#' },
+  { node: <span className="trustbar-logo-text">Pavitra</span>, href: '#' },
 ];
 
 const imageLogos = [

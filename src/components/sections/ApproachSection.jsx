@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { FiSearch, FiPenTool, FiCode, FiSend } from 'react-icons/fi';
 import '../../styles/ApproachSection.css';
+import ScanCarousel from '../ui/ScanCarousel';
+
 
 /* ============================================================
    ANIMATION VARIANTS
@@ -69,6 +71,17 @@ const steps = [
   },
 ];
 
+const images = [
+  { src: 'https://picsum.photos/seed/house-exterior/480/340', alt: 'House exterior' },
+  { src: 'https://picsum.photos/seed/living-room/480/340', alt: 'Living room' },
+  { src: 'https://picsum.photos/seed/modern-lounge/480/340', alt: 'Lounge' },
+  { src: 'https://picsum.photos/seed/green-sofa/480/340', alt: 'Green sofa' },
+  { src: 'https://picsum.photos/seed/bedroom-bed/480/340', alt: 'Bedroom' },
+  { src: 'https://picsum.photos/seed/kitchen-island/480/340', alt: 'Kitchen' },
+  { src: 'https://picsum.photos/seed/reading-nook/480/340', alt: 'Reading nook' },
+  { src: 'https://picsum.photos/seed/balcony-view/480/340', alt: 'Balcony' },
+];
+
 /* ============================================================
    COMPONENT
    ============================================================ */
@@ -76,7 +89,8 @@ export default function ApproachSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="approach" className="approach-section">
+    <>
+     <section id="approach" className="approach-section">
       <div className="approach-inner">
 
         {/* ============ HEADER ============ */}
@@ -138,7 +152,35 @@ export default function ApproachSection() {
           })}
         </motion.div>
 
+        
+
       </div>
     </section>
+
+    {/* CAROUSEL — gold beam, navy bg */}
+        <div className="approach-carousel">
+          <ScanCarousel
+            items={images}
+            cardWidth={220}
+            cardHeight={155}
+            gap={22}
+            speed={60}
+            direction="right"
+            curve={35}
+            depth={160}
+            perspective={1000}
+            cell={3}
+            levels={4}
+            beamColor="#C5A47E"
+            beamWidth={0}
+            cardRadius={14}
+            pauseOnHover={false}
+            imageFit="cover"
+          />
+        </div>
+
+    </>
+   
+    
   );
 }

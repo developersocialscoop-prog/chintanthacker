@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { FiCalendar, FiArrowDown } from 'react-icons/fi';
-import heroImg from '../../assets/hero.png';
+import heroImg from '../../assets/gallary/img-1.png';
 import Galaxy from '../ui/Galaxy';
 import GradientText from '../ui/GradientText';
 import '../../styles/HeroSection.css';
@@ -69,9 +69,14 @@ export default function HeroSection() {
             showBorder={false}
             direction="horizontal"
             yoyo={true}
+            fullWidth={true}
           >
-            <h1 className="hero-heading">Chintan Thacker</h1>
+            <h1 className="hero-heading">Dr Chintan Thacker</h1>
           </GradientText>
+
+          <p className="hero-tagline">
+            Business Growth · Brand Strategest · Entrepreneur
+          </p>
         </motion.div>
 
         {/* PORTRAIT */}
@@ -87,13 +92,13 @@ export default function HeroSection() {
         <motion.div variants={item} className="hero-left">
           <span className="badge">
             <span className="h-1.5 w-1.5 rounded-full bg-green-400" aria-hidden="true" />
-            Open for freelance work
+           Business Growth Open for C
           </span>
 
           <p>
-            Hey there! I&apos;m the CEO of{' '}
-            <span className="font-semibold text-white">SocialScoop</span>. We
-            build scalable software for modern businesses.
+            Hey there! I&apos;m the CEO of  
+            <span className="font-semibold text-white"> SocialScoop</span>. 
+            Helping businesses turns ideas, brands and marketing into measurable growth.
           </p>
 
           <a href="#contact" className="btn-primary">
@@ -105,8 +110,8 @@ export default function HeroSection() {
         {/* RIGHT CONTENT */}
         <motion.div variants={item} className="hero-right">
           <ul className="hero-stats">
-            <li>8 years experience</li>
-            <li>50+ happy clients</li>
+            <li>15 years experience</li>
+            <li>100+ happy clients</li>
           </ul>
 
           <ScrollLink

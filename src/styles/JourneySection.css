@@ -54,7 +54,7 @@
 .shift-heading {
   font-weight: 900;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #FFFFFF;
@@ -188,7 +188,7 @@
   }
 
   .shift-heading {
-    font-size: 2.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -201,7 +201,7 @@
   }
 
   .shift-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .shift-grid {
@@ -224,7 +224,7 @@
   }
 
   .shift-heading {
-    font-size: 3.25rem;
+    font-size: 2.3rem;
   }
 
   .shift-grid {
