@@ -92,8 +92,8 @@ export default function HeroSection() {
         <motion.div variants={item} className="hero-left">
           <span className="badge">
             <span className="h-1.5 w-1.5 rounded-full bg-green-400" aria-hidden="true" />
-           Business Growth Open for C
-          </span>
+            Open for Business Growth Consulting
+           </span>
 
           <p>
             Hey there! I&apos;m the CEO of  
